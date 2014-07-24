@@ -56,6 +56,12 @@
 #include <QDragEnterEvent>
 #include <QUrl>
 #include <QStyle>
+#ifdef WIN32
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#include <QtPlugin>
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin);
+#endif
+#endif
 
 #include <iostream>
 
@@ -852,8 +858,12 @@ void BitcoinGUI::encryptWallet(bool status)
 
 void BitcoinGUI::backupWallet()
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+	QString saveDir = QStandardPaths::standardLocations(QStandardPaths::DocumentsLocation).at(0);
+#else
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
-    QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
+#endif
+	QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
     if(!filename.isEmpty()) {
         if(!walletModel->backupWallet(filename)) {
             QMessageBox::warning(this, tr("Backup Failed"), tr("There was an error trying to save the wallet data to the new location."));
