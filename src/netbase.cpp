@@ -10,6 +10,9 @@
 #ifndef WIN32
 #include <sys/fcntl.h>
 #endif
+#ifdef _MSC_VER
+#define ssize_t size_t
+#endif
 
 #include "strlcpy.h"
 #include <boost/algorithm/string/case_conv.hpp> // for to_lower()

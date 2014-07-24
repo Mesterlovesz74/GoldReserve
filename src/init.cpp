@@ -752,8 +752,7 @@ bool AppInit2()
         return false;
     }
 
-    // ********************************************************* Testing Zerocoin
-
+    /* ********************************************************* Testing Zerocoin
 
     if (GetBoolArg("-zerotest", false))
     {
@@ -761,8 +760,8 @@ bool AppInit2()
         Test_RunAllTests();
         printf("=== ZeroCoin tests end ===\n\n");
     }
-
-    // ********************************************************* Step 8: load wallet
+	
+    // ********************************************************* Step 8: load wallet */
 
     uiInterface.InitMessage(_("Loading wallet..."));
     printf("Loading wallet...\n");
