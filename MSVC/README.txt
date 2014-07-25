@@ -29,12 +29,12 @@ zlib - our project file was made for and tested with 1.2.8
 http://zlib.net/
 
 B.)
-Now you need to unpack evething into the .\GoldReserve\src directory. Here is safe way to achive the exppected results (some tarballs are tricky to unpack on Windows):
+Now you need to unpack everything into the .\GoldReserve\src directory. Here is safe way to achieve the expected results (some tarballs are tricky to unpack on Windows):
 1:
 - You should copy all the archive files listed above (8 in total) into the GoldReserve\src directory.
-- You should launch your favorite archive manager (WinRAR, 7zip, etc.) with Administrator proviliges (this is mandatory for the OpenSSL tarball).
+- You should launch your favorite archive manager (WinRAR, 7zip, etc.) with Administrator privileges (this is mandatory for the OpenSSL tarball).
 - You should select the archive files (all the 8) and hit Extract (or Unpack, or similar...), possibly in silent mode (like the "without confirmation in WinRAR).
-* Note that while some tarballs "only" require Administrator priviliges, some of them won't properly unpack on Windows anyway (varies between archive managers).
+* Note that while some tarballs "only" require Administrator privileges, some of them won't properly unpack on Windows anyway (varies between archive managers).
 This is why you are better off with any other archive types on Windows (.zip, .7z, .rar, etc). But as of this date, OpenSSL is tarball only, hence the Admin notes...
 2:
 You need to strip the version numbers form the name of the freshly unpack directories. They should read exactly as follows:
@@ -48,10 +48,14 @@ C.)
 You need to install CMake (I mean properly install it, system wide, with it's own installer, not just unpack it into the GoldReserve directory or somewhere else).
 To be precise, CMake isn't mandatory. It's used by some project files as a custom pre-build step to carry out some pre-build configurations on third-party code.
 If you are so inclined, you can disable these pre-build steps and do that very minimal configuration manually (it's often enough to strip the .in from some file names).
-However, using CMake is the proper way to do this, so please install and use it... This is also necessary for the seemless "automatic" building of the MSVC solution.
+However, using CMake is the proper way to do this, so please install and use it... This is also necessary for the seamless "automatic" building of the MSVC solution.
 http://www.cmake.org/cmake/resources/software.htm
 
 D.)
+You need to install Perl - we used ActivePerl 5.16.3, other Perl variants might and other (newer) ActivePerl versions should also work
+http://www.activestate.com/activeperl/downloads
+
+E.)
 You can load the .sln file now. Hopefully it will load and every projects will compile without any kind of errors. :)
 Oh, LOL, you know they won't. :P But they probably will after you read the notes again and now you decide to follow it step-by-step. :D
 
@@ -65,7 +69,7 @@ Older MSVC versions might or might not work (updated v10 and v11 versions will p
 It is important to note that our Qt project has a custom build step which backs up and replaces the Qt build configuration file with our own uniquely modified version.
 This was necessary to statically link the final exe file. Future versions of Qt might (or might not) offer an official config switch to achive this without manual editing
 and it's also possible that this brute force editing will break the compilation of future Qt versions. Keep this in mind regarding any Qt related compilation errors...
-This also means that you can't use your existing Qt build (unless you used a similar build configuration) and you can't use this unoficially built Qt in your other projects.
+This also means that you can't use your existing Qt build (unless you used a similar build configuration) and you can't use this unofficially built Qt in your other projects.
 You can see what's overwritten by examining the MSVC\openssl\qmake.conf file (when I was there anyway, I made some small performance tweaks as well :). 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
