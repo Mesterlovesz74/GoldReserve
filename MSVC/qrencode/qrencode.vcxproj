@@ -28,7 +28,6 @@
     <ClInclude Include="..\..\src\qrencode\mmask.h" />
     <ClInclude Include="..\..\src\qrencode\mqrspec.h" />
     <ClInclude Include="..\..\src\qrencode\qrencode.h" />
-    <ClInclude Include="..\..\src\qrencode\qrencode_inner.h" />
     <ClInclude Include="..\..\src\qrencode\qrinput.h" />
     <ClInclude Include="..\..\src\qrencode\qrspec.h" />
     <ClInclude Include="..\..\src\qrencode\rscode.h" />

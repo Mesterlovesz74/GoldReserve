@@ -121,9 +121,6 @@ cmake -G "Visual Studio 12"</Command>
     <ClCompile Include="..\..\src\miniupnpc\upnpreplyparse.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\src\miniupnpc\cmakefiles\3.0.0\CMakeDetermineCompilerABI_C.bin" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\src\miniupnpc\bsdqueue.h" />
     <ClInclude Include="..\..\src\miniupnpc\codelength.h" />
     <ClInclude Include="..\..\src\miniupnpc\connecthostport.h" />
