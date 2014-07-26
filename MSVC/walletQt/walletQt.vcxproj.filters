@@ -52,114 +52,6 @@
     <ClCompile Include="..\..\src\init.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_aboutdialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_addressbookpage.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_addresstablemodel.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_askpassphrasedialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_bitcoinaddressvalidator.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_bitcoinamountfield.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_bitcoingui.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_bitcoinunits.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_clientmodel.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_coincontroldialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_coincontroltreewidget.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_csvmodelwriter.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_editaddressdialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_guiconstants.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_guiutil.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_macdockiconhandler.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_monitoreddatamapper.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_notificator.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_optionsdialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_optionsmodel.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_overviewpage.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qrcodedialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qtipcserver.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qvalidatedlineedit.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_qvaluecombobox.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_rpcconsole.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_sendcoinsdialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_sendcoinsentry.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_signverifymessagedialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_transactiondesc.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_transactiondescdialog.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_transactionfilterproxy.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_transactionrecord.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_transactiontablemodel.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_transactionview.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_walletmodel.cpp">
-      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\qt\monitoreddatamapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -217,53 +109,120 @@
     <ClCompile Include="..\..\src\qt\transactionview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_bitcoin.cpp">
-      <Filter>Source Files\Generated from Qt Resources by RCC</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\qt\walletmodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_aboutdialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_addressbookpage.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_askpassphrasedialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_coincontroldialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_editaddressdialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_optionsdialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_overviewpage.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_qrcodedialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_rpcconsole.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_sendcoinsdialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_sendcoinsentry.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_signverifymessagedialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_transactiondescdialog.h">
-      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
-    </ClInclude>
+    <ClCompile Include="GeneratedFiles\moc_aboutdialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_addressbookpage.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_addresstablemodel.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_askpassphrasedialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_bitcoinaddressvalidator.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_bitcoinamountfield.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_bitcoingui.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_bitcoinunits.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_clientmodel.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_coincontroldialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_coincontroltreewidget.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_csvmodelwriter.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_editaddressdialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_guiconstants.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_guiutil.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_macdockiconhandler.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_monitoreddatamapper.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_notificator.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_optionsdialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_optionsmodel.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_overviewpage.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_qrcodedialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_qtipcserver.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_qvalidatedlineedit.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_qvaluecombobox.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_rpcconsole.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_sendcoinsdialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_sendcoinsentry.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_signverifymessagedialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_transactiondesc.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_transactiondescdialog.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_transactionfilterproxy.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_transactionrecord.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_transactiontablemodel.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_transactionview.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_walletmodel.cpp">
+      <Filter>Source Files\Generated from Headers by Qt MOC</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_bitcoin.cpp">
+      <Filter>Source Files\Generated from Qt Resources by RCC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\src\qt\aboutdialog.h">
@@ -610,5 +569,46 @@
     <ResourceCompile Include="..\..\src\qt\res\bitcoin-qt.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_aboutdialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addressbookpage.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_askpassphrasedialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_coincontroldialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_editaddressdialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_optionsdialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_overviewpage.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_qrcodedialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_rpcconsole.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_sendcoinsdialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_sendcoinsentry.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_signverifymessagedialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_transactiondescdialog.h">
+      <Filter>Header Files\Generated from Forms by Qt UIC</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
