@@ -130,7 +130,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
     <ClCompile>
       <PreprocessorDefinitions>USE_UPNP;USE_QRCODE;QT_GUI;UNICODE;WIN32;WIN64;QT_NO_DEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src;..\..\src\qt;..\..\src\leveldb\include;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;..\..\src\qrencode;..\..\src\qt-everywhere-opensource-src\qtbase\include\;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtCore;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtGui;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtWidgets;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtNetwork;.\GeneratedFiles\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\qt;..\..\src\leveldb\include;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;..\..\src\qrencode;..\..\src\qt-everywhere-opensource-src\qtbase\include\;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtCore;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtGui;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtWidgets;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtNetwork;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -177,7 +177,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>USE_QRCODE;QT_GUI;UNICODE;WIN32;QT_NO_DEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src;..\..\src\qt;..\..\src\leveldb\include;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;..\..\src\qrencode;..\..\src\qt-everywhere-opensource-src\qtbase\include\;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtCore;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtGui;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtWidgets;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtNetwork;$(SolutionDir)$(Configuration);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\qt;..\..\src\leveldb\include;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;..\..\src\qrencode;..\..\src\qt-everywhere-opensource-src\qtbase\include\;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtCore;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtGui;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtWidgets;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtNetwork;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -999,7 +999,7 @@
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">"..\..\src\qt-everywhere-opensource-src\qtbase\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o ".\GeneratedFiles\qrc_%(Filename).cpp"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">"..\..\src\qt-everywhere-opensource-src\qtbase\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o ".\GeneratedFiles\qrc_%(Filename).cpp"</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">"..\..\src\qt-everywhere-opensource-src\qtbase\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\qrc_%(Filename).cpp"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">"..\..\src\qt-everywhere-opensource-src\qtbase\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o ".\GeneratedFiles\qrc_%(Filename).cpp"</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">"..\..\src\qt-everywhere-opensource-src\qtbase\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\qrc_%(Filename).cpp"</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">Rcc%27ing %(Identity)...</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">Rcc%27ing %(Identity)...</Message>

@@ -125,7 +125,7 @@ call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
 call copy qmake.conf qmake.bak
-call copy ..\..\..\..\..\MSVC\QT\qmake.conf qmake.conf
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
 cd ..\..\..
 call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
 call nmake
@@ -143,7 +143,7 @@ del qmake.bak /q</NMakeCleanCommandLine>
 call nmake clean
 cd qtbase\mkspecs\win32-msvc2013
 call copy qmake.conf qmake.bak
-call copy ..\..\..\..\..\MSVC\QT\qmake.conf qmake.conf
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
 cd ..\..\..
 call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
 call nmake
