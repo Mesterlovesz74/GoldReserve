@@ -78,6 +78,8 @@ This also means that you can't use your existing Qt build (unless you used a sim
 You can see what's overwritten by examining the MSVC\openssl\qmake.conf file :)
 
 Also note that Qt's own Clean doesn't really work. You should delete the whole qt-everywhere-opensource-src directory and unpack everything again.
+However, even though you probably receive an error during rebuild if you just changed your configuration after building another one, the wallet will build and work fine.
+(The wallet doesn't need everything from the Qt package and every essential parts get built before the Qt rebuild process reaches the error and stops.)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -86,7 +88,7 @@ TODO
 - Continuously maintain the project files as needed (make them compatible with the future changes in both the wallet's and/or the third-party dependency code changes)
 - Add Debug configurations
 - Refine the project files (this is the initial release, so I guess I left some redundant garbage in them)
-- Investigate the problem with Qt's "nmake clean" (Is there a way to seamless clean/rebuild/multibuild it without auto backup and restore of the original source files?)
+- Investigate the problem with Qt's "nmake clean" (Is there a way to seamlessly clean/rebuild/multibuild it without auto backup and restore of the original source files?)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
