@@ -56,7 +56,7 @@ You need to install Perl - we used ActivePerl 5.16.3, other Perl variants might 
 http://www.activestate.com/activeperl/downloads
 
 E.)
-You can load the .sln file now. Hopefully it will load and every projects will compile without any kind of errors. :)
+You can load the .sln file now. Hopefully it will load and every projects will compile without any kind of errors in the two supported configuration pairs (->see the notes). :)
 Oh, LOL, you know they won't. :P But they probably will after you read the notes again and now you decide to follow it step-by-step. :D
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -66,26 +66,33 @@ NOTES
 These project files were made for and tested with MSVC 2013 (v12).
 Older MSVC versions might or might not work (updated v10 and v11 versions will probably work but you need to manually adapt some version specific settings accordingly).
 
+These project files currently support two configurations pairs: WinXP32 (Release NT 5.1+ | Win32) and WinVista64 (Release NT 6.0+ | x64).
+These should suffice any practical needs and the number of the maintained configurations / official binaries should be kept at a minimum. The other two pairs are turned off:
+WinXP64 probably would not work really well anyway (Windows XP 64-bit was never really supported by anyone -including Microsoft- and very few people use it these days, if ever).
+WinVista32 could theoretically work but that configuration isn't maintained (it's technically there but it probably won't build or run as it is).
+
 It is important to note that our Qt project has a custom build step which backs up and replaces the Qt build configuration file with our own uniquely modified version.
 This was necessary to statically link the final exe file. Future versions of Qt might (or might not) offer an official config switch to achive this without manual editing
 and it's also possible that this brute force editing will break the compilation of future Qt versions. Keep this in mind regarding any Qt related compilation errors...
 This also means that you can't use your existing Qt build (unless you used a similar build configuration) and you can't use this unofficially built Qt in your other projects.
-You can see what's overwritten by examining the MSVC\openssl\qmake.conf file (when I was there anyway, I made some small performance tweaks as well :). 
+You can see what's overwritten by examining the MSVC\openssl\qmake.conf file :)
+
+Also note that Qt's own Clean doesn't really work. You should delete the whole qt-everywhere-opensource-src directory and unpack everything again.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 TODO
 
 - Continuously maintain the project files as needed (make them compatible with the future changes in both the wallet's and/or the third-party dependency code changes)
-- Add Debug and Win64 configurations (so 3 in total...)
+- Add Debug configurations
 - Refine the project files (this is the initial release, so I guess I left some redundant garbage in them)
-- on demand / serve the requests from the community... -> preferably by merging the supplied patches :)
+- Investigate the problem with Qt's "nmake clean" (Is there a way to seamless clean/rebuild/multibuild it without auto backup and restore of the original source files?)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 THANKS / CREDITS
 
 https://bitcoinqtmsvc2012.codeplex.com
-I could reuse most of their code changes. :)
+I could reuse most of their code changes. :) However I went a little further with the project files...
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

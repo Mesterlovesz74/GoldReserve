@@ -5,9 +5,17 @@
       <Configuration>Release NT5.1+</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT5.1+|x64">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release NT6.0+|Win32">
       <Configuration>Release NT6.0+</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|x64">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -25,7 +33,19 @@
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v120_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -37,20 +57,32 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" />
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" />
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">$(SolutionDir)$(ConfigurationName)</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">$(SolutionDir)$(ConfigurationName)</OutDir>
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">$(SolutionDir)$(Configuration)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">$(SolutionDir)$(Configuration)</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
     <EnableManagedIncrementalBuild>false</EnableManagedIncrementalBuild>
@@ -58,10 +90,22 @@
     </LinkIncremental>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
+    <EnableManagedIncrementalBuild>false</EnableManagedIncrementalBuild>
+    <LinkIncremental />
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
     <EnableManagedIncrementalBuild>false</EnableManagedIncrementalBuild>
     <LinkIncremental />
     <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">
+    <EnableManagedIncrementalBuild>false</EnableManagedIncrementalBuild>
+    <LinkIncremental />
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
     <ClCompile>
@@ -111,7 +155,103 @@
       </LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>USE_UPNP;WIN32;WIN64;_WIN32_WINNT=0x0501;UNICODE;NDEBUG;STATICLIB;HAVE_WORKING_BOOST_SLEEP_FOR;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>
+      </InlineFunctionExpansion>
+      <FavorSizeOrSpeed>
+      </FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\src\boost\stage\lib;..\..\src\openssl\out32;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>coincode.lib;miniupnpc.lib;leveldb.lib;db.lib;ssleay32.lib;libeay32.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;Ws2_32.lib;gdi32.lib;comdlg32.lib;oleaut32.lib;imm32.lib;winmm.lib;winspool.lib;Shlwapi.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ForceFileOutput>
+      </ForceFileOutput>
+      <ShowProgress>
+      </ShowProgress>
+      <SetChecksum>true</SetChecksum>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>
+      </UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>
+      </LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0501;UNICODE;NDEBUG;STATICLIB;HAVE_WORKING_BOOST_SLEEP_FOR;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>
+      </InlineFunctionExpansion>
+      <FavorSizeOrSpeed>
+      </FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\src\boost\stage\lib;..\..\src\openssl\out32;$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>coincode.lib;leveldb.lib;db.lib;ssleay32.lib;libeay32.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;ws2_32.lib;gdi32.lib;comdlg32.lib;oleaut32.lib;imm32.lib;winmm.lib;winspool.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ForceFileOutput>
+      </ForceFileOutput>
+      <ShowProgress>
+      </ShowProgress>
+      <SetChecksum>true</SetChecksum>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>
+      </UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>
+      </LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">
     <ClCompile>
       <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0501;UNICODE;NDEBUG;STATICLIB;HAVE_WORKING_BOOST_SLEEP_FOR;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
