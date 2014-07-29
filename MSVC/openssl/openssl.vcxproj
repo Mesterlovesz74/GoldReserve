@@ -114,7 +114,8 @@ copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
 del crypto\opensslconf.h.ba2 /q</NMakeCleanCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
-    <NMakePreprocessorDefinitions>WIN32;WIN64;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>cd ../../src/openssl
 copy Makefile Makefile.ba2
 copy Makefile.bak Makefile.ba2.ba2
@@ -168,7 +169,8 @@ copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
 del crypto\opensslconf.h.ba2 /q</NMakeCleanCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
-    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>cd ../../src/openssl
 copy Makefile Makefile.ba2
 copy Makefile.bak Makefile.ba2.ba2

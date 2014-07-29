@@ -28,13 +28,21 @@
 
 #ifdef WIN32
 #ifdef _WIN32_WINNT
+#ifndef _MSC_VER
 #undef _WIN32_WINNT
 #endif
+#endif
+#ifndef _MSC_VER
 #define _WIN32_WINNT 0x0501
+#endif
 #ifdef _WIN32_IE
+#ifndef _MSC_VER
 #undef _WIN32_IE
 #endif
+#endif
+#ifndef _MSC_VER
 #define _WIN32_IE 0x0501
+#endif
 #define WIN32_LEAN_AND_MEAN 1
 #ifndef NOMINMAX
 #define NOMINMAX

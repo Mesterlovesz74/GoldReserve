@@ -89,7 +89,8 @@ del tools\build\v2\engine\bootstrap /s /q</NMakeCleanCommandLine>
     <NMakeBuildCommandLine>cd ../../src/boost
 call bootstrap.bat
 b2 address-model=64 variant=release link=static runtime-link=static threading=multi --build-type=complete --with-chrono --with-filesystem --with-program_options --with-system --with-thread --with-date_time --with-regex stage</NMakeBuildCommandLine>
-    <NMakePreprocessorDefinitions>WIN32;WIN64;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
     <NMakeReBuildCommandLine>cd ../../src/boost
 del project-config.jam /q
 del b2.exe /q
@@ -115,7 +116,8 @@ del tools\build\v2\engine\bootstrap /s /q</NMakeCleanCommandLine>
     <NMakeBuildCommandLine>cd ../../src/boost
 call bootstrap.bat
 b2 variant=release link=static runtime-link=static threading=multi --build-type=complete --with-chrono --with-filesystem --with-program_options --with-system --with-thread --with-date_time --with-regex stage</NMakeBuildCommandLine>
-    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
     <NMakeReBuildCommandLine>cd ../../src/boost
 del project-config.jam /q
 del b2.exe /q

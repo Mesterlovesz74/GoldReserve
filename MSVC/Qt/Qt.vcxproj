@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013\qmake.conf" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3D78FC10-4974-486E-8FBD-EE0941AC1CB6}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
@@ -92,7 +95,8 @@ call del qmake.conf /q
 call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
-    <NMakePreprocessorDefinitions>WIN32;WIN64;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
 call copy qmake.conf qmake.bak
 call copy ..\..\..\..\..\MSVC\QT\qmake.conf
@@ -122,7 +126,8 @@ call del qmake.conf /q
 call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
-    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
 call copy qmake.conf qmake.bak
 call copy ..\..\..\..\..\MSVC\QT\qmake.conf

@@ -108,6 +108,7 @@ Global
 		{E5CF8146-00D6-40AC-9686-CB6FE8DB1C43}.Release NT6.0+ native|x64.ActiveCfg = Release NT6.0+|x64
 		{E5CF8146-00D6-40AC-9686-CB6FE8DB1C43}.Release NT6.0+ native|x64.Build.0 = Release NT6.0+|x64
 		{1E6F250D-AE00-46DC-A57A-C4EA237C5EFE}.Release NT5.1+ comp|Win32.ActiveCfg = Release NT5.1+|Win32
+		{1E6F250D-AE00-46DC-A57A-C4EA237C5EFE}.Release NT5.1+ comp|Win32.Build.0 = Release NT5.1+|Win32
 		{1E6F250D-AE00-46DC-A57A-C4EA237C5EFE}.Release NT5.1+ comp|x64.ActiveCfg = Release NT6.0+|x64
 		{1E6F250D-AE00-46DC-A57A-C4EA237C5EFE}.Release NT5.1+ comp|x64.Build.0 = Release NT5.1+|x64
 		{1E6F250D-AE00-46DC-A57A-C4EA237C5EFE}.Release NT6.0+ native|Win32.ActiveCfg = Release NT6.0+|Win32
