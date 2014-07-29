@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>USE_UPNP;USE_QRCODE;QT_GUI;QT_NO_DEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;WIN32;_WIN32_WINNT=0x0600;_WIN32_IE=0x0600;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_IPV6;USE_UPNP;USE_QRCODE;USE_IPV6;QT_GUI;QT_NO_DEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;WIN32;_WIN32_WINNT=0x0600;_WIN32_IE=0x0600;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\..\src;..\..\src\qt;..\..\src\leveldb\include;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;..\..\src\qrencode;..\..\src\qt-everywhere-opensource-src\qtbase\include\;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtCore;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtGui;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtWidgets;..\..\src\qt-everywhere-opensource-src\qtbase\include\QtNetwork;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -164,8 +164,7 @@
       </ForceFileOutput>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ShowProgress>
-      </ShowProgress>
+      <ShowProgress>LinkVerboseLib</ShowProgress>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>
