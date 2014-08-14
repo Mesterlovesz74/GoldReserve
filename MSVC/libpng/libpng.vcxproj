@@ -146,7 +146,7 @@ cmake -G "Visual Studio 12"</Command>
     </Link>
     <PreBuildEvent>
       <Command>cd ..\..\src\libpng
-cmake -G "Visual Studio 12"</Command>
+cmake -G "Visual Studio 12" -DZLIB_INCLUDE_DIR=..\..\zlib -DZLIB_LIBRARY="$(SolutionDir)$(Configuration)"</Command>
     </PreBuildEvent>
     <ProjectReference>
       <LinkLibraryDependencies>
@@ -190,7 +190,7 @@ cmake -G "Visual Studio 12"</Command>
     </Link>
     <PreBuildEvent>
       <Command>cd ..\..\src\libpng
-cmake -G "Visual Studio 12"</Command>
+cmake -G "Visual Studio 12" -DZLIB_INCLUDE_DIR=..\..\zlib -DZLIB_LIBRARY="$(SolutionDir)$(Configuration)"</Command>
     </PreBuildEvent>
     <ProjectReference>
       <LinkLibraryDependencies>
