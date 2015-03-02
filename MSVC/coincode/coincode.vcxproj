@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release NT5.1+|Win32">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT5.1+|x64">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|Win32">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|x64">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\addrman.cpp" />
+    <ClCompile Include="..\..\src\aes_helper.c" />
+    <ClCompile Include="..\..\src\alert.cpp" />
+    <ClCompile Include="..\..\src\bitcoinrpc.cpp" />
+    <ClCompile Include="..\..\src\blake.c" />
+    <ClCompile Include="..\..\src\bloom.cpp" />
+    <ClCompile Include="..\..\src\bmw.c" />
+    <ClCompile Include="..\..\src\checkpoints.cpp" />
+    <ClCompile Include="..\..\src\crypter.cpp" />
+    <ClCompile Include="..\..\src\cubehash.c" />
+    <ClCompile Include="..\..\src\db.cpp" />
+    <ClCompile Include="..\..\src\echo.c" />
+    <ClCompile Include="..\..\src\groestl.c" />
+    <ClCompile Include="..\..\src\hash.cpp" />
+    <ClCompile Include="..\..\src\init.cpp" />
+    <ClCompile Include="..\..\src\irc.cpp" />
+    <ClCompile Include="..\..\src\jh.c" />
+    <ClCompile Include="..\..\src\keccak.c" />
+    <ClCompile Include="..\..\src\kernel.cpp" />
+    <ClCompile Include="..\..\src\key.cpp" />
+    <ClCompile Include="..\..\src\keystore.cpp" />
+    <ClCompile Include="..\..\src\luffa.c" />
+    <ClCompile Include="..\..\src\miner.cpp" />
+    <ClCompile Include="..\..\src\pbkdf2.cpp" />
+    <ClCompile Include="..\..\src\scrypt.cpp" />
+    <ClCompile Include="..\..\src\shavite.c" />
+    <ClCompile Include="..\..\src\simd.c" />
+    <ClCompile Include="..\..\src\skein.c" />
+    <ClCompile Include="..\..\src\txdb-leveldb.cpp" />
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\net.cpp" />
+    <ClCompile Include="..\..\src\netbase.cpp" />
+    <ClCompile Include="..\..\src\noui.cpp" />
+    <ClCompile Include="..\..\src\protocol.cpp" />
+    <ClCompile Include="..\..\src\rpcblockchain.cpp" />
+    <ClCompile Include="..\..\src\rpcdump.cpp" />
+    <ClCompile Include="..\..\src\rpcmining.cpp" />
+    <ClCompile Include="..\..\src\rpcnet.cpp" />
+    <ClCompile Include="..\..\src\rpcrawtransaction.cpp" />
+    <ClCompile Include="..\..\src\rpcwallet.cpp" />
+    <ClCompile Include="..\..\src\script.cpp" />
+    <ClCompile Include="..\..\src\sync.cpp" />
+    <ClCompile Include="..\..\src\util.cpp" />
+    <ClCompile Include="..\..\src\version.cpp" />
+    <ClCompile Include="..\..\src\wallet.cpp" />
+    <ClCompile Include="..\..\src\walletdb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\addrman.h" />
+    <ClInclude Include="..\..\src\alert.h" />
+    <ClInclude Include="..\..\src\allocators.h" />
+    <ClInclude Include="..\..\src\base58.h" />
+    <ClInclude Include="..\..\src\bignum.h" />
+    <ClInclude Include="..\..\src\bitcoinrpc.h" />
+    <ClInclude Include="..\..\src\bloom.h" />
+    <ClInclude Include="..\..\src\checkpoints.h" />
+    <ClInclude Include="..\..\src\checkqueue.h" />
+    <ClInclude Include="..\..\src\clientversion.h" />
+    <ClInclude Include="..\..\src\coincontrol.h" />
+    <ClInclude Include="..\..\src\compat.h" />
+    <ClInclude Include="..\..\src\crypter.h" />
+    <ClInclude Include="..\..\src\db.h" />
+    <ClInclude Include="..\..\src\hash.h" />
+    <ClInclude Include="..\..\src\hashblock.h" />
+    <ClInclude Include="..\..\src\init.h" />
+    <ClInclude Include="..\..\src\irc.h" />
+    <ClInclude Include="..\..\src\kernel.h" />
+    <ClInclude Include="..\..\src\key.h" />
+    <ClInclude Include="..\..\src\keystore.h" />
+    <ClInclude Include="..\..\src\limitedmap.h" />
+    <ClInclude Include="..\..\src\main.h" />
+    <ClInclude Include="..\..\src\miner.h" />
+    <ClInclude Include="..\..\src\mruset.h" />
+    <ClInclude Include="..\..\src\net.h" />
+    <ClInclude Include="..\..\src\netbase.h" />
+    <ClInclude Include="..\..\src\pbkdf2.h" />
+    <ClInclude Include="..\..\src\protocol.h" />
+    <ClInclude Include="..\..\src\script.h" />
+    <ClInclude Include="..\..\src\scrypt.h" />
+    <ClInclude Include="..\..\src\serialize.h" />
+    <ClInclude Include="..\..\src\sph_blake.h" />
+    <ClInclude Include="..\..\src\sph_bmw.h" />
+    <ClInclude Include="..\..\src\sph_cubehash.h" />
+    <ClInclude Include="..\..\src\sph_echo.h" />
+    <ClInclude Include="..\..\src\sph_groestl.h" />
+    <ClInclude Include="..\..\src\sph_jh.h" />
+    <ClInclude Include="..\..\src\sph_keccak.h" />
+    <ClInclude Include="..\..\src\sph_luffa.h" />
+    <ClInclude Include="..\..\src\sph_shavite.h" />
+    <ClInclude Include="..\..\src\sph_simd.h" />
+    <ClInclude Include="..\..\src\sph_skein.h" />
+    <ClInclude Include="..\..\src\sph_types.h" />
+    <ClInclude Include="..\..\src\strlcpy.h" />
+    <ClInclude Include="..\..\src\sync.h" />
+    <ClInclude Include="..\..\src\threadsafety.h" />
+    <ClInclude Include="..\..\src\txdb-leveldb.h" />
+    <ClInclude Include="..\..\src\txdb.h" />
+    <ClInclude Include="..\..\src\uint256.h" />
+    <ClInclude Include="..\..\src\ui_interface.h" />
+    <ClInclude Include="..\..\src\util.h" />
+    <ClInclude Include="..\..\src\version.h" />
+    <ClInclude Include="..\..\src\wallet.h" />
+    <ClInclude Include="..\..\src\walletdb.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{10A182A9-E55E-46D3-A473-E021C15B061C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>coincode</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectName>coincode</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0630;UNICODE;NDEBUG;STATICLIB;USE_UPNP;MINIUPNP_STATICLIB;HAVE_WORKING_BOOST_SLEEP_FOR;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <InlineFunctionExpansion>
+      </InlineFunctionExpansion>
+      <FavorSizeOrSpeed>
+      </FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <Verbose>
+      </Verbose>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>
+      </LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <PreprocessorDefinitions>USE_IPV6;WIN32;_WIN32_WINNT=0x0600;_WIN32_IE=0x0600;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <InlineFunctionExpansion>
+      </InlineFunctionExpansion>
+      <FavorSizeOrSpeed>
+      </FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <Verbose>
+      </Verbose>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
+      <TargetMachine>MachineX64</TargetMachine>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>
+      </LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0501;_WIN32_IE=0x0501;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <InlineFunctionExpansion>
+      </InlineFunctionExpansion>
+      <FavorSizeOrSpeed>
+      </FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <Verbose>
+      </Verbose>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>
+      </LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0501;UNICODE;NDEBUG;STATICLIB;HAVE_WORKING_BOOST_SLEEP_FOR;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\src;..\..\src\leveldb\include;..\..\src\leveldb\helpers;..\..\src\db\build_windows;..\..\src\boost;..\..\src\openssl\inc32;..\..\src\miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <InlineFunctionExpansion>
+      </InlineFunctionExpansion>
+      <FavorSizeOrSpeed>
+      </FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <StringPooling>
+      </StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <Verbose>
+      </Verbose>
+      <ForceSymbolReferences>
+      </ForceSymbolReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>
+      </LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

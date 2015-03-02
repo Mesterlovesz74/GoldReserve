@@ -19,7 +19,11 @@
 #include <boost/version.hpp>
 
 #if defined(WIN32) && (!defined(BOOST_INTERPROCESS_HAS_WINDOWS_KERNEL_BOOTTIME) || !defined(BOOST_INTERPROCESS_HAS_KERNEL_BOOTTIME) || BOOST_VERSION < 104900)
+#ifndef _MSC_VER
 #warning Compiling without BOOST_INTERPROCESS_HAS_WINDOWS_KERNEL_BOOTTIME and BOOST_INTERPROCESS_HAS_KERNEL_BOOTTIME uncommented in boost/interprocess/detail/tmp_dir_helpers.hpp or using a boost version before 1.49 may have unintended results see svn.boost.org/trac/boost/ticket/5392
+#else
+#pragma message ( "Compiling without BOOST_INTERPROCESS_HAS_WINDOWS_KERNEL_BOOTTIME and BOOST_INTERPROCESS_HAS_KERNEL_BOOTTIME uncommented in boost/interprocess/detail/tmp_dir_helpers.hpp or using a boost version before 1.49 may have unintended results see svn.boost.org/trac/boost/ticket/5392" )
+#endif
 #endif
 
 using namespace boost;
@@ -84,7 +88,7 @@ static void ipcThread(void* pArg)
     catch (std::exception& e) {
         PrintExceptionContinue(&e, "ipcThread()");
     } catch (...) {
-        PrintExceptionContinue(NULL, "ipcThread()");
+        PrintExceptionContinue(0, "ipcThread()");
     }
     printf("ipcThread exited\n");
 }
@@ -119,7 +123,7 @@ static void ipcThread2(void* pArg)
 
 void ipcInit(int argc, char *argv[])
 {
-    message_queue* mq = NULL;
+    message_queue* mq = 0;
     char buffer[MAX_URI_LENGTH + 1] = "";
     size_t nSize = 0;
     unsigned int nPriority = 0;

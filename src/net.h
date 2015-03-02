@@ -5,6 +5,10 @@
 #ifndef BITCOIN_NET_H
 #define BITCOIN_NET_H
 
+#ifdef _MSC_VER
+#include <winsock2.h>
+#endif
+
 #include <deque>
 #include <boost/array.hpp>
 #include <boost/foreach.hpp>

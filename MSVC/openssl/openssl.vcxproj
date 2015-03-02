@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release NT5.1+|Win32">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT5.1+|x64">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|Win32">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|x64">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E5CF8146-00D6-40AC-9686-CB6FE8DB1C43}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ../../src/openssl
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN32
+call ms\do_ms
+nmake -f ms\nt.mak</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>cd ../../src/openssl
+call nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN32
+call ms\do_ms
+nmake -f ms\nt.mak</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>cd ../../src/openssl
+nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ../../src/openssl
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN64A
+call ms\do_win64a
+nmake -f ms\nt.mak</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>cd ../../src/openssl
+call nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN64A
+call ms\do_win64a
+nmake -f ms\nt.mak</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>cd ../../src/openssl
+nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ../../src/openssl
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN32
+call ms\do_ms
+nmake -f ms\nt.mak</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>cd ../../src/openssl
+call nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN32
+call ms\do_ms
+nmake -f ms\nt.mak</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>cd ../../src/openssl
+nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q</NMakeCleanCommandLine>
+    <ExecutablePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Bin;$(VC_ExecutablePath_x86);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(PATH)</ExecutablePath>
+    <IncludePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Include;$(VC_IncludePath)</IncludePath>
+    <LibraryPath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Lib;$(VC_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ../../src/openssl
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN32
+call ms\do_ms
+nmake -f ms\nt.mak</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>cd ../../src/openssl
+call nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q
+copy Makefile Makefile.ba2
+copy Makefile.bak Makefile.ba2.ba2
+copy crypto\opensslconf.h crypto\opensslconf.h.ba2
+call perl Configure VC-WIN32
+call ms\do_ms
+nmake -f ms\nt.mak</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>cd ../../src/openssl
+nmake -f ms\nt.mak clean
+del inc32 /s /q
+del out32 /s /q
+del MINFO /q
+del crypto\buildinf.h /q
+del crypto\opensslconf.h.bak  /q
+del ms\libeay32.def  /q
+del ms\nt.mak  /q
+del ms\ntdll.mak  /q
+del ms\ssleay32.def  /q
+del ms\version32.rc  /q
+del Makefile
+copy Makefile.ba2 Makefile
+del Makefile.ba2 /q
+copy Makefile.ba2.ba2 Makefile.bak
+del Makefile.ba2.ba2 /q
+copy crypto\opensslconf.h.ba2 crypto\opensslconf.h
+del crypto\opensslconf.h.ba2 /q</NMakeCleanCommandLine>
+    <ExecutablePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Bin;$(VC_ExecutablePath_x86);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(PATH)</ExecutablePath>
+    <IncludePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Include;$(VC_IncludePath)</IncludePath>
+    <LibraryPath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Lib;$(VC_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -19,18 +19,30 @@
 #include <QDesktopServices>
 #include <QThread>
 
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+#include <QUrlQuery>
+#endif
+
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
 
 #ifdef WIN32
 #ifdef _WIN32_WINNT
+#ifndef _MSC_VER
 #undef _WIN32_WINNT
 #endif
+#endif
+#ifndef _MSC_VER
 #define _WIN32_WINNT 0x0501
+#endif
 #ifdef _WIN32_IE
+#ifndef _MSC_VER
 #undef _WIN32_IE
 #endif
+#endif
+#ifndef _MSC_VER
 #define _WIN32_IE 0x0501
+#endif
 #define WIN32_LEAN_AND_MEAN 1
 #ifndef NOMINMAX
 #define NOMINMAX
@@ -84,7 +96,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
     SendCoinsRecipient rv;
     rv.address = uri.path();
     rv.amount = 0;
-    QList<QPair<QString, QString> > items = uri.queryItems();
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+	QUrlQuery q;
+	q.setQuery(uri.query());
+	QList<QPair<QString, QString> > items = q.queryItems();
+#else
+	QList<QPair<QString, QString> > items = uri.queryItems();
+#endif
     for (QList<QPair<QString, QString> >::iterator i = items.begin(); i != items.end(); i++)
     {
         bool fShouldReturnFalse = false;
@@ -137,7 +155,11 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+	QString escaped = QString(str).toHtmlEscaped();
+#else
     QString escaped = Qt::escape(str);
+#endif
     if(fMultiLine)
     {
         escaped = escaped.replace("\n", "<br>\n");
@@ -172,7 +194,11 @@ QString getSaveFileName(QWidget *parent, const QString &caption,
     QString myDir;
     if(dir.isEmpty()) // Default to user documents location
     {
-        myDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
+		myDir = QStandardPaths::standardLocations(QStandardPaths::DocumentsLocation).at(0);
+#else
+		myDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
+#endif
     }
     else
     {

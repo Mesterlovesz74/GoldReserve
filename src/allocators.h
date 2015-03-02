@@ -11,10 +11,12 @@
 #include <map>
 
 #ifdef WIN32
+#ifndef _MSC_VER
 #ifdef _WIN32_WINNT
 #undef _WIN32_WINNT
 #endif
 #define _WIN32_WINNT 0x0501
+#endif //MSC_VER
 #define WIN32_LEAN_AND_MEAN 1
 #ifndef NOMINMAX
 #define NOMINMAX

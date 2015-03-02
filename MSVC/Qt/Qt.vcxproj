@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release NT5.1+|Win32">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT5.1+|x64">
+      <Configuration>Release NT5.1+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|Win32">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NT6.0+|x64">
+      <Configuration>Release NT6.0+</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013\qmake.conf" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D78FC10-4974-486E-8FBD-EE0941AC1CB6}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>Qt</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeBuildCommandLine>
+    <IncludePath>$(ProjectDir)..\..\src\zlib;$(ProjectDir)..\..\src\libpng;$(ProjectDir)..\..\src\openssl\inc32;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Configuration);$(ProjectDir)..\..\src\openssl\out32;$(LibraryPath)</LibraryPath>
+    <NMakeCleanCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+del qmake.bak /q</NMakeCleanCommandLine>
+    <AdditionalOptions>
+    </AdditionalOptions>
+    <NMakeReBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT6.0+|x64'">
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeBuildCommandLine>
+    <IncludePath>$(ProjectDir)..\..\src\zlib;$(ProjectDir)..\..\src\libpng;$(ProjectDir)..\..\src\openssl\inc32;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Configuration);$(ProjectDir)..\..\src\openssl\out32;$(LibraryPath)</LibraryPath>
+    <NMakeCleanCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+del qmake.bak /q</NMakeCleanCommandLine>
+    <AdditionalOptions />
+    <NMakeReBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|Win32'">
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeBuildCommandLine>
+    <IncludePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Include;$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Include\gl;$(VC_IncludePath);$(ProjectDir)..\..\src\zlib;$(ProjectDir)..\..\src\libpng;$(ProjectDir)..\..\src\openssl\inc32</IncludePath>
+    <LibraryPath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Lib;$(VC_LibraryPath_x86);$(ProjectDir)..\..\src\openssl\out32;$(SolutionDir)$(Configuration)</LibraryPath>
+    <NMakeCleanCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+del qmake.bak /q</NMakeCleanCommandLine>
+    <AdditionalOptions />
+    <NMakeReBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
+    <ExecutablePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Bin;$(VC_ExecutablePath_x86);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(PATH)</ExecutablePath>
+    <ExcludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(MSBuild_ExecutablePath);$(VC_LibraryPath_x86);</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NT5.1+|x64'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src\qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeBuildCommandLine>
+    <IncludePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Include;$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Include\gl;$(VC_IncludePath);$(ProjectDir)..\..\src\zlib;$(ProjectDir)..\..\src\libpng;$(ProjectDir)..\..\src\openssl\inc32</IncludePath>
+    <LibraryPath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Lib;$(VC_LibraryPath_x86);$(ProjectDir)..\..\src\openssl\out32;$(SolutionDir)$(Configuration)</LibraryPath>
+    <NMakeCleanCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+del qmake.bak /q</NMakeCleanCommandLine>
+    <AdditionalOptions />
+    <NMakeReBuildCommandLine>cd ..\..\src\qt-everywhere-opensource-src
+call nmake clean
+cd qtbase\mkspecs\win32-msvc2013
+call copy qmake.conf qmake.bak
+call copy ..\..\..\..\..\MSVC\QT\qmake.conf qmake.conf
+cd ..\..\..
+call configure.bat -opensource -release -static -sse2 -make libs -mp -ltcg -openssl -system-libpng -system-zlib -qt-pcre -no-vcproj -no-sql-sqlite -no-opengl -no-icu -no-gif -no-libjpeg -no-freetype -no-angle -no-dbus -no-audio-backend -no-wmf-backend -no-qml-debug -nomake examples -nomake tests -confirm-license
+call nmake
+cd qtbase\mkspecs\win32-msvc2013
+call del qmake.conf /q
+call copy qmake.bak qmake.conf</NMakeReBuildCommandLine>
+    <ExecutablePath>$(ExtensionSDKDirectoryRoot)\Windows\v7.1A\Bin;$(VC_ExecutablePath_x86);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(PATH)</ExecutablePath>
+    <ExcludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(MSBuild_ExecutablePath);$(VC_LibraryPath_x86);</ExcludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

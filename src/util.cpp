@@ -37,14 +37,22 @@ namespace boost {
 #pragma warning(disable:4805)
 #pragma warning(disable:4717)
 #endif
+#ifndef _MSC_VER
 #ifdef _WIN32_WINNT
 #undef _WIN32_WINNT
 #endif
+#endif
+#ifndef _MSC_VER
 #define _WIN32_WINNT 0x0501
+#endif
+#ifndef _MSC_VER
 #ifdef _WIN32_IE
 #undef _WIN32_IE
 #endif
+#endif
+#ifndef _MSC_VER
 #define _WIN32_IE 0x0501
+#endif
 #define WIN32_LEAN_AND_MEAN 1
 #ifndef NOMINMAX
 #define NOMINMAX
